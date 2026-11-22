@@ -9,5 +9,5 @@ def plot(best_fit: list[float], avg_fit: list[float], config:GAConfig):
     plt.ylabel("Fitness")
     plt.title(f"GA with {config.generations} generations, {config.crossover_rate} crossover, {config.mutation_rate} mutation")
     plt.legend()
-    plt.show()
+    plt.savefig(f"Generation_{config.generations}_cross_{config.crossover_rate}_mutate_{config.mutation_rate}.png")
 
